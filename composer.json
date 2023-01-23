@@ -1,0 +1,41 @@
+{
+    "name": "zbowl/food-data-central-api",
+    "description": "Integration for Food Data Central API",
+    "keywords": ["food data central", "nutrition", "api"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zachary Boling",
+            "email": "zbowl1@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": "^9.0",
+        "nesbot/carbon": "~2"
+    },
+    "autoload": {
+        "psr-4": {
+            "zbowl\\FoodDataCentralApi\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "zbowl\\FoodDataCentralApi\\FoodDataCentralServiceProvider"
+            ],
+            "aliases": {
+                "FoodDataCentral": "zbowl\\FoodDataCentralApi\\Facades\\FoodDataCentral"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
